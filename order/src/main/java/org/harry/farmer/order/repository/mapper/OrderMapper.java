@@ -13,7 +13,7 @@ public class OrderMapper implements RowMapper<OrderRecord> {
         OrderRecord orderRecord = new OrderRecord();
         orderRecord.setId(UUID.fromString(rs.getString("id")));
         orderRecord.setCustomerId(UUID.fromString(rs.getString("customer_id")));
-        orderRecord.setProductId(UUID.fromString("product_id"));
+        orderRecord.setProductId(UUID.fromString(rs.getString("product_id")));
         return orderRecord;
     }
 }

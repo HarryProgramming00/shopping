@@ -20,7 +20,7 @@ public class OrderRepository {
     private final JdbcTemplate jdbcTemplate;
 
     private final String INSERT_ORDER = "INSERT INTO orders VALUES (?, ?, ?)";
-    private final String SELECT_BY_CUSTOMER_ID = "SELECT * FROM orders where customerId = ?";
+    private final String SELECT_BY_CUSTOMER_ID = "SELECT * FROM orders where customer_id = ?";
 
     public UUID save(OrderDto orderDto) {
         log.info("Saving {}", orderDto);
