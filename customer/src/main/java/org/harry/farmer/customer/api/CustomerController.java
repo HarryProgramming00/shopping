@@ -40,7 +40,7 @@ public class CustomerController {
 
     @PostMapping(CREATE)
     public UUID create(@Valid @RequestBody CreateCustomer createCustomer) {
-        log.info("Create customer {}", createCustomer.getName());
+        log.info("Creating customer {}", createCustomer.getName());
         return customerService.create(toCustomerDto(createCustomer));
     }
 
